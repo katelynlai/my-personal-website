@@ -1,0 +1,179 @@
+:root {
+  --header-bg: #81a5c9;
+  --header-text: #ecf0f1;
+  --link-hover: #3498db;
+  --main-bg: #f3f0f0;
+  --main-text: #2d3436;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--main-text);
+  background-color: var(--main-bg);
+  margin: 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Header styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--header-bg);
+  color: var(--header-text);
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.header nav a {
+  color: var(--header-text);
+  text-decoration: none;
+  margin-left: 1.5rem;
+  transition: color 0.2s;
+}
+
+.header nav a:hover {
+  color: var(--link-hover);
+}
+
+/* Main content below header */
+.content {
+  margin-top: 2rem;
+  padding: 0 1rem;
+  line-height: 1.6;
+}
+
+.content section {
+  margin-bottom: 3rem;
+}
+
+.content h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0.8rem;
+  border-bottom: 2px solid var(--header-bg);
+  display: inline-block;
+}
+
+.content ul {
+  list-style: disc inside;
+  margin-left: 1rem;
+}
+
+.content a {
+  color: var(--header-bg);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.content a:hover {
+  color: var(--link-hover);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+  }
+  .header nav a {
+    margin: 0.5rem 1rem 0 1rem;
+  }
+  .content {
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+}
+
+.profile-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--header-bg);
+  flex-shrink: 0; 
+}
+
+.about-text {
+  flex: 1; /* text takes remaining width */
+  line-height: 1.6;
+}
+
+.about-content {
+  display: flex;
+  align-items: flex-start; /* aligns image and text at top */
+  gap: 1.5rem;             /* space between image and text */
+  margin-top: 1rem;
+}
+
+/* Responsive: stack image on top on small screens */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .profile-photo {
+    margin-bottom: 1rem;
+  }
+  .about-text {
+    text-align: center;
+  }
+}
+
+.skill-bubbles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.bubble {
+  background-color: #81a5c9;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+  white-space: nowrap;
+  font-size: 0.95rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: background-color 0.3s;
+}
+
+.bubble:hover {
+  background-color: #2980b9;
+}
+
+.project {
+  margin-bottom: 2rem;
+}
+
+.project h3 {
+  font-size: 1.3rem;
+  color: #81a5c9;
+  margin-bottom: 0.5rem;
+}
+
+.project-image {
+  display: block;
+  max-width: 400px;   
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin: 0.5rem 0 1rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ecotrackr-image {
+  max-width: 300px; 
+}
